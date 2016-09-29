@@ -17,11 +17,7 @@ public class Milk {
 		this.price = price;
 	}
 	
-	public boolean isGood(){
-		return LocalDateTime.now().isBefore(warranty);
-	}
-
-	public int getCapacity() {
+		public int getCapacity() {
 		return capacity;
 	}
 
@@ -39,6 +35,10 @@ public class Milk {
 
 	public long getPrice() {
 		return price;
+	}
+
+	public boolean isGood(){
+		return LocalDateTime.now().isBefore(getWarranty());
 	}
 
 	@Override
